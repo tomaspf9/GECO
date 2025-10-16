@@ -1,0 +1,6 @@
+node src/server.js
+npx prisma migrate dev --name init
+npx prisma generate
+node seeds/seed.js
+docker compose up -d
+docker compose down -v
